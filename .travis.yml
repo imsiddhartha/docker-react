@@ -1,0 +1,12 @@
+language: generic
+sudo: required  #sudo permission required
+
+services: # what all services are required to run this job.
+ - docker
+
+before_install: # things to do before running tests
+ - docker build -t imsiddhartha/docker-react -f Dockerfile.dev .
+
+script: # running tests.
+ - docker run -e CI=true imsiddhatha/docker-react npm run test
+
