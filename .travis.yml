@@ -8,5 +8,5 @@ before_install: # things to do before running tests
  - docker build -t imsiddhartha/docker-react -f Dockerfile.dev .
 
 script: # running tests.
- - docker run -e CI=true imsiddhatha/docker-react npm run test
+ - docker run -e CI=true imsiddhartha/docker-react npm run test
 
